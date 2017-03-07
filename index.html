@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/bo.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <meta name="keywords" content="北京娱信科技有限公司,北京娱信科技,娱信科技,娱信众评">
     <meta name="description" content="北京娱信科技有限公司致力于深度挖掘数据价值，为各个行业用户提供可靠、安全、精准的泛社交类互联网产品和应用平台" />
@@ -14,9 +15,11 @@
         function ShowDiv(show_div,bg_div){
             document.getElementById(show_div).style.display='block';
             document.getElementById(bg_div).style.display='block' ;
-            var bgdiv = document.getElementById(bg_div);
-            bgdiv.style.width = document.body.scrollWidth;
-            $("#"+bg_div).height($(document).height());
+           // var bgdiv = document.getElementById(bg_div);
+           /* bgdiv.style.width = document.body.scrollWidth;*/
+            var $bg_div =$("#"+bg_div);
+            $bg_div.width($(document).width());
+            $bg_div.height($(document).height());
         }
         //关闭弹出层
         function CloseDiv(show_div,bg_div)
@@ -29,12 +32,12 @@
         @font-face{font-family:myFont; src:url("css/font/shishang.ttf")}
     </style>
 </head>
-<body>
+<body style="min-width: 1250px">
     <div id="header">
 
         <div class="login ">
-            <a href="###" onclick="ShowDiv('MyDiv','fade')">登录</a>
-            <a class="register" href="###" onclick="ShowDiv('MyDiv','fade')">注册</a>
+            <a href="javascript:;" onclick="ShowDiv('MyDiv','fade')">登录</a>
+            <a class="register" href="javascript:;" onclick="ShowDiv('MyDiv','fade')">注册</a>
         </div>
         <div class="nav">
         <a id="logo" href="javascript:;"><img src="images/logo.png" alt=""></a>
@@ -44,18 +47,22 @@
                 <li><a href="#certification">娱信认证</a></li>
                 <li><a href="#pk">PK排行</a></li>
                 <li><a href="#task">娱信任务</a></li>
-                <li><a href="#about">关于我们</a></li>
+                <li><a href="#about">产品简介</a></li>
             </ul>
         </div>
     </div>
     <div id="content">
-        <div id="portrayal" class="portrayal ">
-            <img src="images/portrayal.png" alt="">
+        <div id="portrayal" class="portrayal">
+            <img src="images/portrayal2.png" alt="">
             <div class="describe">
-                <p >娱信众评手机APP下载</p>
+                <p >打造诚信社交网络，不断提升自我价值</p>
                 <p>通过好友的匿名、实名评论生成娱信画像</p>
+                <div class="android">
+                    <img src="images/android.png" alt="">
+                    <span>Android 版</span>
+                </div>
                 <div class="phone">
-                    <img src="images/phone.png" alt="">
+                    <img src="images/ios.png" alt="">
                     <span>iPhone 版</span>
                 </div>
             </div>
@@ -64,15 +71,47 @@
             <div class="title">
                 <p class="line"></p><h2>娱信评分</h2><p class="line"></p>
             </div>
-            <p>通过好友评论、自然语言分析、娱信模型给出6大维度的评分和综合得分</p>
+            <p>通过社交网络、好友评论生成娱信画像和评分</p>
             <div class="scroll">
-                <img src="images/grade.png" alt="">
-                <a href="###"> <span class="next"></span></a>
-                <div>
-                <a class="spot" href=""></a>
-                <a class="spot" href=""></a>
+                <div class="grade1" >
+                    <img src="images/grade.png" alt="">
+                    <p class="t1">外貌形象</p><a class="line1" href="javascript:;"><img src="images/line1.png" alt=""></a>
+                    <p class="t2">财产状况</p><a class="line2" href="javascript:;"><img src="images/line2.png" alt=""></a>
+                    <p class="t3">教育情况</p><a class="line3" href="javascript:;"><img src="images/line3.png" alt=""></a>
+                    <p class="t4">诚信履约</p><a class="line4" href="javascript:;"><img src="images/line4.png" alt=""></a>
+                    <p class="t5">公司职场</p><a class="line5" href="javascript:;"><img src="images/line5.png" alt=""></a>
+                    <p class="t6">人脉关系</p><a class="line6" href="javascript:;"><img src="images/line6.png" alt=""></a>
                 </div>
+                <div class="grade2" >
+                    <canvas id="waves" width="200" height="200" ></canvas>
+                    <img src="images/grade2.png" alt="">
+                </div>
+                <div class="grade3" >
+                    <div class="left">
+                        <p>
+                            娱信众评是一款真实、安全、精准的泛社交类平台；<br/>
+                            发现贴近自己属性的朋友圈、拓展感兴趣社交领域的人脉；<br/>
+                            超Q的人物头像漫画，人物形象更立体、鲜明；<br/>
+                            各种有趣的互动方式,营造真实可靠的社交环境；
+                        </p>
+                    </div>
+                    <img src="images/grade3.png" alt="">
+                    <div class="right">
+                        <p>
+                            注重用户隐私，自行设置信息的可见范围，只有共同好友的评论才可见；<br/>
+                            娱信科技能够为企业用户搭建精准画像和数据模型，精准定位潜在客户；<br/>
+                            基于好友与共同好友，基于地理位置，基于共同爱好，基于搜索，基于共同话题结识彼此。
+                        </p>
+                    </div>
+                </div>
+                <div class="spot">
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </div>
+                <a class="next" href="javascript:;"><img src="images/next.png" alt=""></a>
             </div>
+
         </div>
         <div id="certification" class="certification public clearfix">
             <div class="title">
@@ -84,16 +123,59 @@
                 <li><img class="right" src="images/2.png" alt=""><span class="sRight">学历认证</span></li>
                 <li><span class="sLeft">工作单位认证</span><img class="left" src="images/3.png" alt=""></li>
                 <li><img class="right" src="images/4.png" alt=""><span class="sRight">职务认证</span></li>
-                <li><span class="sLeft">联系方式认证</span><img class="left" src="images/5.png" alt=""></li>
-                <li><img  class="right" src="images/6.png" alt=""><span class="sRight">技能认证</span></li>
+                <li><span class="sLeft">联系方式认证</span><img class="left" src="images/6.png" alt=""></li>
+                <li><img  class="right" src="images/5.png" alt=""><span class="sRight">技能认证</span></li>
             </ul>
         </div>
         <div id="pk" class="ranking public">
             <div class="title">
                 <p class="line"></p><h2>PK排行</h2><p class="line"></p>
             </div>
-            <p>当用户选择其他用户进行PK后，结果会分别通过用户的“外貌”、“职场”、“财产”、“教育”、“人脉”、“诚信”等6项目来进行打分评比</p>
-            <img src="images/pk.png" alt="">
+            <p>PK分为个人PK和其他PK，个人PK包括综合分数PK、单项PK、人气PK、运动量PK；其他PK包括团队PK和随机PK</p>
+            <div class="pk">
+                <div class="pkPic">
+                    <img src="images/pk1.png" alt="">
+                    <figure class="chart chart1" data-percent="75">
+                        <figcaption class="html">750</figcaption>
+
+                        <svg width="140" height="140">
+                            <circle class="outer" cx="121" cy="70" r="59" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                    </figure>
+                    <figure class="chart chart2" data-percent="75">
+                        <figcaption class="html">750</figcaption>
+
+                        <svg width="140" height="140">
+                            <circle class="outer" cx="121" cy="70" r="59" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                    </figure>
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="fans fansL">
+                        <img src="images/fans.png" alt="">
+                        <span>+230</span>
+                    </div>
+                    <div class="fans fansR">
+                        <img src="images/fans.png" alt="">
+                        <span>+13</span>
+                    </div>
+
+                    <div class="walk walk1">
+                        <img src="images/walk1.png" alt="">
+                        <p>408980步</p>
+                    </div>
+                    <div class="walk walk2">
+                        <img src="images/walk2.png" alt="">
+                        <p>208980步</p>
+                    </div>
+                    <div class="girl">
+                        <img src="images/girl.png" alt="">
+                    </div>
+                    <div class="boy">
+                        <img src="images/boy.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="task" class="task public">
             <div class="title">
@@ -103,44 +185,43 @@
             <img src="images/task.png" alt="">
         </div>
         <div id="about" class="about public">
+          <!--  <img src="images/about.png" alt="">-->
             <div class="title">
-                <p class="line"></p><h2>关于我们</h2><p class="line"></p>
+                <p class="line bottomLine"></p><h2>产品简介</h2><p class="line bottomLine"></p>
             </div>
             <div class="guild">
-                <div class="map">
-                    <img src="images/map.png" alt="">
-                </div>
-                <div class="introduce">
-                    <p>北京娱信科技有限公司成立于2016年；</p>
-                    <p>致力于深度挖掘数据价值，为各个行业用户提供可靠、安全、精准的泛社</p>
-                    <p>交类互联网产品和应用平台；</p>
-                    <p>娱信科技拥有强大的底层数据支撑能力、先进的数据挖掘技术、深度解析</p>
-                    <p>和数据融合能力；</p>
-                    <p>娱信科技能够让个人用户体验到大数据应用所带来的高品质生活；</p>
+                    <p>真实、安全、精准的泛社交类平台；</p>
+                    <p>发现贴近自己属性的朋友圈、拓展感兴趣社交领域的人脉；</p>
+                    <p>超Q的人物头像漫画，人物形象更立体、鲜明；</p>
+                    <p>各种有趣的互动方式；</p>
+                    <p>营造真实可靠的社交环境；</p>
+                    <p>注重用户隐私，自行设置信息的可见范围，只有共同好友的评论才可见；</p>
                     <p>娱信科技能够为企业用户搭建精准画像和数据模型，精准定位潜在客户；</p>
-                    <p>娱信科技将利用自身优势，持续优化互联网生态体系。</p>
-                </div>
-                <div class="contactWay">
-                    <p class="address"><span></span> &nbsp;北京市海淀区清河嘉园东区甲一号14层</p>
-                    <p class="email"><span></span> &nbsp;business@funinchat.com</p>
-                    <p class="tel"><span></span> &nbsp;010-59423168</p>
-                </div>
+                    <p>基于好友与共同好友，基于地理位置，基于共同爱好，基于搜索，基于共同话题结识彼此。</p>
             </div>
-
+            <div class="contactWay">
+                <p class="address"><span></span> &nbsp;北京市海淀区清河嘉园东区甲一号14层</p>
+                <p class="email"><span></span> &nbsp;business@funinchat.com</p>
+                <p class="tel"><span></span> &nbsp;010-59423168</p>
+            </div>
+            <div class="back">
+                <a href="#"><img src="images/back.png" alt=""></a>
+            </div>
         </div>
     </div>
     <div id="footer">
+       <!-- <img src="images/erweima.png" alt="">-->
         <p>&copy;2015-2016 北京娱信科技有限公司 京ICP备17001434号-1</p>
     </div>
     <!--登录-->
         <div id="MyDiv" class="loginBox" style="display: none">
-            <a class="close" href="###" onclick="CloseDiv('MyDiv','fade')"></a>
+            <a class="close" href="javascript:;" onclick="CloseDiv('MyDiv','fade')"></a>
             <div class="option" >
-                <a href="###" >登录</a>
-                <a href="###">注册</a>
+                <a href="javascript:;" >登录</a>
+                <a href="javascript:;">注册</a>
             </div>
            <!-- 显示登录-->
-            <div  class="account" >
+            <div  class="account">
                 <form>
                     <label>账号</label>&nbsp;
                     <input type="text" name="username" id="username" placeholder="请输入您绑定的手机号码" />
@@ -152,7 +233,7 @@
                     <input type="checkbox"  class="di-x"  id="agreement" appearance="none" checked="checked" >
                 </label>
                 <span class="z-size">记住我</span>
-                <a class="forget" href="###">忘记密码？</a>
+                <a class="forget" href="javascript:;">忘记密码？</a>
                 <button class="enter">登 录</button>
             </div>
             <!-- 显示注册-->
@@ -181,7 +262,7 @@
                 <p>请输入您的注册手机号</p>
                 <input class="phone" type="text" placeholder="请输入您的手机号码">
                 <input class="codeInput"  type="text" placeholder="请输入验证码">
-                <input class="code"  type="button" value="EX97" />
+                <input class="code"  type="button" value="EX97"/>
                 <a class="refresh " href="">刷新</a>
                 <button class="enter">下一步</button>
             </div>

@@ -40,6 +40,9 @@
     color: #fff;
     font-size: 16px;
 }
+#header ul li a:hover{
+    color:#f6e366;
+}
 .active{
     color: #f6e366 !important;
 }
@@ -48,7 +51,9 @@
 #content{
     position: relative;
 }
-
+#content>div{
+    margin-bottom: 60px;
+}
 #content .portrayal>img{
     width: 100%;
 }
@@ -60,7 +65,7 @@
     right: 15%;
 }
 #content .portrayal .describe p:nth-of-type(1){
-    font-size: 45px;
+    font-size: 40px;
     color: #fff;
     margin-bottom: 50px;
     padding-left: 90px;
@@ -70,29 +75,37 @@
     font-size: 30px;
     color: #fff;
     margin-bottom: 40px;
+    margin-left: 230px;
     font-family:"黑体"
 }
-#content .portrayal .describe .phone{
+#content .portrayal .describe div{
+   display: inline-block;
     width: 180px;
     height: 68px;
     line-height: 68px;
     background: #3e8cc3;
     border-radius: 5px;
+
+}
+#content .portrayal .describe .android{
     margin-left: 360px;
 }
-#content .portrayal .describe .phone img{
-    vertical-align: -16px;
+#content .portrayal .describe .phone{
+    margin-left: 40px;
+}
+#content .portrayal .describe div img{
+    vertical-align: -6px;
     padding-left: 22px;
     padding-right: 5px;
 }
-#content .portrayal .describe .phone span{
+#content .portrayal .describe div span{
     font-size: 22px;
     color: #fff;
 }
 /*评分*/
 #content .public{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 #content .public .title{
     height: 30px;
@@ -104,7 +117,7 @@
     display: inline-block;
     width: 244px;
    vertical-align: 6px;
-    border: 1px solid #cdcdcd;
+    border: 1px solid #ccc;
 }
 #content .public h2{
     display: inline-block;
@@ -116,23 +129,151 @@
 #content .public>p{
     font-size: 20px;
     color: #999;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
-#content .grade .scroll .next{
-    display: inline-block;
-    margin-bottom: 270px;
-    width:44px;
-    height: 66px;
-    background: url("../images/next.png")no-repeat;
+#content .scroll{
+    position: relative;
+    height: 692px;
 }
-#content .grade .scroll .spot{
+#content .scroll .next{
+    position: absolute;
+    right: 200px;
+    top: 300px;
+}
+#content .scroll .spot{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: 30px;
+}
+#content .scroll .spot a{
     display: inline-block;
-    width: 10px;
+    width: 11px;
     height: 10px;
     background: url("../images/spot.png")no-repeat;
 }
-/*认证*/
+#content .scroll .grade1{
+    position: absolute;
+    left: 50%;
+    margin-left: -157px;
+}
+#content .scroll .grade1 a{
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+#content .scroll .grade1 .line1{
+    top:157px;
+    left: -186px;
+}
+#content .scroll .grade1 p{
+    width: 120px;
+    position: absolute;
+    font-size: 30px;
+    display: none;
+}
+#content .scroll .grade1 .t1{
+    top:109px;
+    left: -245px;
+    color:#6e62ae;
+}
+#content .scroll .grade1 .line2{
+    top:211px;
+    left: -392px;
+}
+#content .scroll .grade1 .t2{
+    top:165px;
+    left: -445px;
+    color:#d57984;
+}
+#content .scroll .grade1 .line3{
+    top:421px;
+    left: -276px;
+}
+#content .scroll .grade1 .t3{
+    top:504px;
+    left: -336px;
+    color:#ffc817;
+}
+#content .scroll .grade1 .line4{
+    top:255px;
+    right: -143px;
+}
+#content .scroll .grade1 .t4{
+    top:210px;
+    right: -202px;
+    color:#24a3ff;
+}
+#content .scroll .grade1 .line5{
+    top:403px;
+    right: -276px;
+}
+#content .scroll .grade1 .t5{
+    top:397px;
+    right: -403px;
+    color:#48cab0;
+}
+#content .scroll .grade1 .line6{
+    bottom: 119px;;
+    right: -238px;
+}
+#content .scroll .grade1 .t6{
+    bottom: 82px;;
+    right: -298px;
+    color:#ea4a94;
+}
+#content .scroll .grade2,#content .scroll .grade3{
+    position: absolute;
+    left: 50%;
+    margin-left: -157px;
+    display: none;
+}
+
+#waves{
+   position: absolute;
+    top: -140px;
+    left:-620px;
+    width: 1400px !important;
+    z-index: -1;
+}
+#content .scroll .grade3 div{
+    width: 358px;
+}
+#content .scroll .grade3 .left p{
+    font-size: 20px;
+    color: #999;
+    line-height: 36px;
+    text-align: left;
+}
+#content .scroll .grade3 .right p{
+    font-size: 20px;
+    color: #999;
+    line-height: 36px;
+    text-align: right;
+}
+#content .scroll .grade3 .left{
+position: absolute;
+    top: 184px;
+    left: -440px;
+    animation:leftMove 5s;
+}
+@keyframes leftMove {
+    from{left:-540px;}
+    to{ left: -440px;}
+}
+#content .scroll .grade3 .right{
+    position: absolute;
+    top: 184px;
+    left: 400px;
+    animation:rightMove 5s;
+}
+@keyframes rightMove {
+    from{left:500px;}
+    to{ left: 400px;}
+}
+    /*认证*/
 #content .certification ul li{
     float: left;
     width: 50%;
@@ -159,78 +300,290 @@
 #content .certification ul li .sRight{
     padding-right: 200px;
 }
+
+#content .certification ul li img:hover{
+    transform: scale(1.2);
+    transition: all 1s ease 0s;
+    -webkit-transform: scale(1.2);
+    -webkit-transition: all 1s ease 0s;
+    -moz-transform: scale(1.2);
+    -moz-transition: all 1s ease 0s;
+    opacity: 0.9;
+}
+/*pk*/
+#pk{
+    margin-bottom: 0 !important;
+}
+#pk .pk{
+    position: relative;
+    height: 692px;
+    margin-top: 140px;
+}
+#pk .pk .pkPic{
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+}
+/*转动的*/
+.chart1 {
+    position: absolute;
+    display: inline-block;
+    color: #999;
+    font-size: 20px;
+    text-align: center;
+    top: -66px;
+    left: -300px;
+}
+.chart2 {
+    position: absolute;
+    display: inline-block;
+    color: #999;
+    font-size: 20px;
+    text-align: center;
+    top: -66px;
+    left: 150px;
+}
+.chart figcaption {
+    padding: 25px 25px;
+    width: 50px;
+    height: 50px;
+    border: 20px solid #f0f0f0;
+    border-radius: 100px;
+    line-height: 50px;
+}
+
+
+/* END Container styles */
+
+/* Colors for the circles and positions for the graphics */
+.html {
+    top: 50px;
+    left: 45px;
+}
+
+.html + svg .outer {
+    stroke: #5DACE7;
+}
+
+
+.chart svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.outer {
+    fill: transparent;
+    stroke: #333;
+    stroke-width: 20;
+    stroke-dasharray: 460;
+    transition: stroke-dashoffset 1s;
+    -webkit-animation-play-state: running;
+
+    /* firefox bug fix - won't rotate at 90deg angles */
+    -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart:hover .outer {
+    stroke-dashoffset: 534 !important;
+    -webkit-animation-play-state: paused;
+}
+/* END Circle colors and graphic positions */
+
+
+/* Set the initial values for the animation */
+
+.chart[data-percent='75'] .outer {
+    stroke-dashoffset: 200;
+    -webkit-animation: show75 2s;
+    animation: show75 2s;
+}
+
+
+/* END set initial animation values */
+
+/* Keyframes for the initial animation */
+
+
+@-webkit-keyframes show75 {
+    from {
+        stroke-dashoffset: 460;
+    }
+
+    to {
+        stroke-dashoffset: 200;
+    }
+}
+
+@keyframes show75 {
+    from {
+        stroke-dashoffset: 460;
+    }
+
+    to {
+        stroke-dashoffset: 200;
+    }
+}
+/*转动结束*/
+
+/*进度条开始*/
+.bar {
+    position:absolute;
+    border: 2px solid #5DACE7;
+    width:0;
+    height:9px;
+    margin:80px 0 0 80px;
+    background: #5DACE7;
+    border-radius:0.8em;
+    animation: roll 10s linear infinite;
+}
+.bar1{
+    top: 102px;
+    left: -443px;
+}
+.bar2{
+    top: 102px;
+    left: 44px;
+}
+.bar:after {
+    width:300px;
+    height:17px;
+    border:1px solid rgba(204,204,204,1);
+    background:#ccc;
+    border-radius:1em;
+    display:block;
+    content:"";
+    position:absolute;
+    left:-5px;
+    top:-5px;
+    z-index:-1;
+}
+
+@-moz-keyframes roll {
+    0% { width:0; }
+    100% { width:290px; }
+}
+
+@-webkit-keyframes roll {
+    0% { width:0; }
+    100% { width:290px; }
+}
+/*进度条结束*/
+#pk .pkPic .fans,#pk .pkPic .walk{
+    position: absolute;
+}
+#pk .pkPic .walk{
+    width: 100px;
+}
+#pk .pkPic .walk p{
+    padding-top: 10px;
+    color: #ffbc1a;
+}
+#pk .pkPic .fans span{
+    color: #f00;
+    position: absolute;
+    top: 0;
+    right: -23px;
+}
+#pk .pkPic .fansL{
+    top: 313px;
+    left: -243px;
+}
+#pk .pkPic .fansR{
+    top: 313px;
+    left: 216px;
+}
+#pk .pkPic .walk1{
+    bottom: -28px;
+    left: -258px;
+}
+#pk .pkPic .walk2{
+    bottom: -28px;
+    left: 218px;
+}
+#pk .girl{
+    position: absolute;
+    top: 200px;
+    left: -560px;
+}
+#pk .boy{
+    position: absolute;
+    top: 200px;
+    left: 560px;
+}
 /*关于我们*/
 #about{
     width: 100%;
+    position: relative;
+    background:#3598DC;
     height: 500px;
-    background: #3499dc;
-
 }
 #content .about .title{
     padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -389px;
+}
+#content .about .title .bottomLine{
+  border: 1px solid #fff;
 }
 #content .about .title h2{
     color: #fff;
 }
 #about .guild{
-    width: 90%;
-    height: 384px;
-    margin: 0 auto;
-    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -320px;
+    margin-top: 100px;
 }
-#about .guild .map,#about .guild .introduce,#about .guild .contactWay{
-    /*display: inline-block;*/
-    float: left;
+#about img{
+    width: 100%;
 }
-#about .guild .map{
-    width: 30%;
-}
-
-#about .guild .introduce{
-    width: 40%;
-    margin-top: 50px;
-}
-#about .guild .introduce p{
-    line-height: 34px;
-    text-align: left;
-    font-size: 18px;
+#about .guild p{
     color: #fff;
+    line-height: 35px;
 }
-#about .guild .contactWay{
-    width: 30%;
-    margin-top: 60px;
+#about .contactWay{
+    padding-top:420px;
 }
-#about .guild .contactWay p{
-    font-size: 18px;
+#about .contactWay p{
+    display: inline-block;
     color: #fff;
-    height: 80px;
-    line-height: 80px;
-    text-align: left;
+    width: 33%;
 }
-#about .guild .contactWay p span{
-    vertical-align: middle;
+#about .contactWay p{
+    height: 40px;
+    line-height: 40px;
 }
-#about .guild .contactWay .address span{
+#about .contactWay .address span{
     display: inline-block;
     width: 33px;
     height: 37px;
     background: url("../images/address.png") no-repeat;
+    vertical-align:middle;
 }
-
-#about .guild .contactWay .email span{
+#about .contactWay .email span{
     display: inline-block;
     width: 37px;
     height: 29px;
     background: url("../images/email.png") no-repeat;
+    vertical-align:middle;
 }
-#about .guild .contactWay .tel span{
+#about .contactWay .tel span{
     display: inline-block;
     width: 41px;
     height: 33px;
     background: url("../images/tel.png") no-repeat;
+    vertical-align:middle;
 }
-
-/*footer*/
+#about .back{
+    position: absolute;
+    right: 76px;
+    bottom: 26px;
+}
+    /*footer*/
 #footer{
     height: 50px;
     text-align: center;
@@ -239,6 +592,7 @@
     color: #999;
     font-size: 16px;
     font-family: "微软雅黑";
+    margin:20px 0;
 }
 /*登录框*/
 .loginBox{
@@ -494,21 +848,9 @@
     }
     #header .nav ul{
         padding-left: 50px;
-
     }
     #about .guild{
-        width: 95%;
-    }
-    #about .guild .introduce p{
-        font-size: 18px!important;
-        line-height: 28px;
-    }
-    #about .guild .map{
-        margin-top: 60px;
-
-    }
-    #about .guild .map img{
-        width: 90% !important;
+        margin-top: 90px;
     }
 
 }
@@ -519,14 +861,26 @@
     #header .nav ul{
         padding-left: 80px;
     }
-    #about .guild .introduce{
-        margin-top: 20px;
+    #about .guild{
+        margin-top: 80px;
     }
-    #about .guild .introduce p{
-        line-height: 31px;
+}
+@media all and (min-width: 980px) and (max-width:1400px){
+    #content .certification ul li .sLeft{
+        padding-left: 36px;
     }
-    #about .guild .map img{
-        width: 90% !important;
-        margin-top: 22px;
+}
+@media all and (max-width: 980px){
+
+    #content .certification ul li .sLeft{
+        padding-left: 36px;
+    }
+    #about .back{
+        right: 35px;
+    }
+    .loginBox{
+        margin-left: -146px;
+        margin-top: -160px;
+
     }
 }
