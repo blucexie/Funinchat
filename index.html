@@ -32,7 +32,7 @@
         @font-face{font-family:myFont; src:url("css/font/shishang.ttf")}
     </style>
 </head>
-<body style="min-width: 1250px">
+<body style="min-width: 1300px">
     <div id="header">
 
         <div class="login ">
@@ -47,7 +47,6 @@
                 <li><a href="#certification">娱信认证</a></li>
                 <li><a href="#pk">PK排行</a></li>
                 <li><a href="#task">娱信任务</a></li>
-                <li><a href="#about">产品简介</a></li>
             </ul>
         </div>
     </div>
@@ -56,22 +55,21 @@
             <img src="images/portrayal2.png" alt="">
             <div class="describe">
                 <p >打造诚信社交网络，不断提升自我价值</p>
-                <p>通过好友的匿名、实名评论生成娱信画像</p>
-                <div class="android">
+                <a href="file/yxzp.apk" class="android">
                     <img src="images/android.png" alt="">
                     <span>Android 版</span>
-                </div>
-                <div class="phone">
+                </a>
+                <a  class="phone">
                     <img src="images/ios.png" alt="">
                     <span>iPhone 版</span>
-                </div>
+                </a>
             </div>
         </div>
         <div id="grade" class="grade public">
             <div class="title">
-                <p class="line"></p><h2>娱信评分</h2><p class="line"></p>
+                <p class="line"></p><h2>娱信雷达图</h2><p class="line"></p>
             </div>
-            <p>通过社交网络、好友评论生成娱信画像和评分</p>
+            <p>通过社交网络、好友评论生成娱信画像娱信评分和娱信雷达图</p>
             <div class="scroll">
                 <div class="grade1" >
                     <img src="images/grade.png" alt="">
@@ -83,7 +81,7 @@
                     <p class="t6">人脉关系</p><a class="line6" href="javascript:;"><img src="images/line6.png" alt=""></a>
                 </div>
                 <div class="grade2" >
-                    <canvas id="waves" width="200" height="200" ></canvas>
+                    <canvas id="waves"></canvas>
                     <img src="images/grade2.png" alt="">
                 </div>
                 <div class="grade3" >
@@ -153,20 +151,20 @@
                     <div class="bar bar2"></div>
                     <div class="fans fansL">
                         <img src="images/fans.png" alt="">
-                        <span>+230</span>
+                        <span>+<em>230</em></span>
                     </div>
                     <div class="fans fansR">
                         <img src="images/fans.png" alt="">
-                        <span>+13</span>
+                        <span>+<em>13</em></span>
                     </div>
 
                     <div class="walk walk1">
                         <img src="images/walk1.png" alt="">
-                        <p>408980步</p>
+                        <p><span>408980</span>步</p>
                     </div>
                     <div class="walk walk2">
                         <img src="images/walk2.png" alt="">
-                        <p>208980步</p>
+                        <p><span>208980</span>步</p>
                     </div>
                     <div class="girl">
                         <img src="images/girl.png" alt="">
@@ -184,8 +182,8 @@
             <p>用户可以发布或领取任务，并在完成任务后获得相应奖励</p>
             <img src="images/task.png" alt="">
         </div>
-        <div id="about" class="about public">
-          <!--  <img src="images/about.png" alt="">-->
+       <!-- <div id="about" class="about public">
+          &lt;!&ndash;  <img src="images/about.png" alt="">&ndash;&gt;
             <div class="title">
                 <p class="line bottomLine"></p><h2>产品简介</h2><p class="line bottomLine"></p>
             </div>
@@ -207,11 +205,11 @@
             <div class="back">
                 <a href="#"><img src="images/back.png" alt=""></a>
             </div>
-        </div>
+        </div>-->
     </div>
     <div id="footer">
        <!-- <img src="images/erweima.png" alt="">-->
-        <p>&copy;2015-2016 北京娱信科技有限公司 京ICP备17001434号-1</p>
+        <p>&copy; 北京娱信科技有限公司 京ICP备17001434号-1</p>
     </div>
     <!--登录-->
         <div id="MyDiv" class="loginBox" style="display: none">
@@ -261,7 +259,8 @@
                 <h2>找回密码</h2>
                 <p>请输入您的注册手机号</p>
                 <input class="phone" type="text" placeholder="请输入您的手机号码">
-                <input class="codeInput"  type="text" placeholder="请输入验证码">
+                <input class="codeInput"  type
+                        ="text" placeholder="请输入验证码">
                 <input class="code"  type="button" value="EX97"/>
                 <a class="refresh " href="">刷新</a>
                 <button class="enter">下一步</button>
